@@ -1,7 +1,3 @@
-<html>
-	<head><link rel="stylesheet" href="includes/loggedin.css" type="text/css" media="screen"/></head>
-</html>
-
 <?php 
 // The user is redirected here from login.php.
 
@@ -21,7 +17,7 @@ $page_title = 'Logged In!';
 include ('includes/header.html');
 
 ?>
-
+<link rel="stylesheet" href="includes/loggedin.css" type="text/css" media="screen"/>
 <div class="wrapper">
 
 <?php

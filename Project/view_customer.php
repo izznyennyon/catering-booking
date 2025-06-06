@@ -1,25 +1,21 @@
-<html>
-	<head>
+<?php 
+// This script retrieves all the records from the users table.
+// This new version links to edit and delete pages.
+session_start(); // Start the session.
+
+// If no session value is present, redirect the user:
+if (!isset($_SESSION['user_id'])) {
+	// Need the functions:
+	require ('includes/login_functions.inc.php');
+	redirect_user();	
+}
+
+$page_title = 'View the Current Users';
+include ('includes/header.html');
+		?>
 		<link rel="stylesheet" href="includes/view_customer.css" type="text/css" media="screen"/>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		
-	</head>
-	<body>
-		<?php 
-		// This script retrieves all the records from the users table.
-		// This new version links to edit and delete pages.
-		session_start(); // Start the session.
-
-		// If no session value is present, redirect the user:
-		if (!isset($_SESSION['user_id'])) {
-			// Need the functions:
-			require ('includes/login_functions.inc.php');
-			redirect_user();	
-		}
-
-		$page_title = 'View the Current Users';
-		include ('includes/header.html');
-		?>
 		<div class="wrapper0">
 			<div class="wrapper">
 				<?php

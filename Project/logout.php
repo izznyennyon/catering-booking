@@ -1,6 +1,3 @@
-<html>
-	<head><link rel="stylesheet" href="includes/loggedin.css" type="text/css" media="screen"/></head>
-</html>
 <?php
 // This page lets the user logout.
 // This version uses sessions.
@@ -26,6 +23,7 @@ $page_title = 'Logged Out!';
 include ('includes/header.html');
 
 ?>
+<link rel="stylesheet" href="includes/loggedin.css" type="text/css" media="screen"/>
 <div class="wrapper">
 <?php
 // Print a customized message:

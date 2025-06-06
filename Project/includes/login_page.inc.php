@@ -1,5 +1,9 @@
+<?php 
+session_start();
+?>
 <html>
 <head>
+    <link rel="stylesheet" href="includes/login.css" type="text/css" media="screen"/>
     <style>
         .erorrh1 {
             color: red;
@@ -23,8 +27,7 @@
     </style>
 </head>
 <body>
-<?php 
-session_start();
+<?php
 
 // This page prints any errors associated with logging in
 // and it creates the entire login page, including the form.

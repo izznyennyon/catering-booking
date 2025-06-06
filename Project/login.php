@@ -1,9 +1,3 @@
-<html>
-<head>
-    <link rel="stylesheet" href="includes/login.css" type="text/css" media="screen"/>
-</head>
-</html>
-
 <?php 
 // This page processes the login form submission.
 // The script now uses sessions.

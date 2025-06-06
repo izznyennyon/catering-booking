@@ -5,10 +5,11 @@
 // selects the database, and sets the encoding.
 
 // Set the database access information as constants:
-DEFINE ('DB_USER', 'root');
-DEFINE ('DB_PASSWORD', '');
-DEFINE ('DB_HOST', 'localhost');
-DEFINE ('DB_NAME', 'cateringdata');
+// Use Docker environment variables if available, otherwise use defaults for XAMPP
+DEFINE ('DB_USER', getenv('DB_USER') ?: 'root');
+DEFINE ('DB_PASSWORD', getenv('DB_PASS') ?: '');
+DEFINE ('DB_HOST', getenv('DB_HOST') ?: 'localhost');
+DEFINE ('DB_NAME', getenv('DB_NAME') ?: 'cateringdata');
 
 
 // Make the connection:

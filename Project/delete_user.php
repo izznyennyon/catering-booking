@@ -1,20 +1,22 @@
-<html>
-	<link rel="stylesheet" href="includes/deleteUser.css">
-</html>
-
 <?php # Script 10.3 - edit_user.php
+session_start(); // Start the session.
+
 // This page is for editing a user record.
 // This page is accessed through view_users.php.
 
-session_start(); // Start the session.
-
 // If no session value is present, redirect the user:
 if (!isset($_SESSION['user_id'])) {
-
 	// Need the functions:
 	require ('includes/login_functions.inc.php');
 	redirect_user();	
 }
+?>
+<html>
+<head>
+	<link rel="stylesheet" href="includes/deleteUser.css">
+</head>
+<body>
+<?php
 $page_title = 'Delete a User';
 include ('includes/header.html');
 echo '<h1>Delete a User</h1>';
@@ -96,3 +98,5 @@ mysqli_close($dbc);
 <?php
 include ('includes/footer_loggedin.html');
 ?>
+</body>
+</html>
